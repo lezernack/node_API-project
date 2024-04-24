@@ -21,3 +21,9 @@ Content-Type: application/json
     "age": 34,
     "currentCollege": "Assassin's Academy"
 }
+
+### update student
+GET http://localhost:3001/students HTTP/1.1
+
+### delete a student
+GET http://localhost:3001/students HTTP/1.1
