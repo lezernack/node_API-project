@@ -1,12 +1,11 @@
-const { mongo } = require("mongoose");
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
-const awesomeFunction = (Req, res) => {
+const awesomeFunction = (req, res, next) => {
   res.send("Hello World!");
 };
 
-const ttechFunction = (Req, res) => {
+const ttechFunction = (req, res, next) => {
   res.send("Tooele Tech is Awesome!");
 };
 
