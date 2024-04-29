@@ -11,11 +11,7 @@ const ttechFunction = (req, res, next) => {
 
 const getAllStudents = async (req, res) => {
   try {
-    const result = await mongodb
-      .getDb()
-      .db()
-      .collection("Students.Students")
-      .find();
+    const result = await mongodb.getDb().db().students("Students").find();
     result.toArray().then((lists) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(lists);
