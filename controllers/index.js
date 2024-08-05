@@ -119,7 +119,7 @@ const deleteStudent = async (req, res) => {
       .collection("students")
       .deleteOne({ _id: userId }, true);
     console.log(response);
-    if (response.ackknowledged) {
+    if (response.acknowledged) {
       res.status(200).send(response);
     } else {
       res
